@@ -4,7 +4,7 @@ Snake- 1, water- -1, gun- 0'''
 
 import random
 computer = random.choice([1,-1,0])
-youstr = input("Enter your choice: ")
+youstr = input("Enter your choice (s for Snake, w for Water, g for Gun): ")
 youDict = {"s": 1, "w": -1, "g": 0}
 reverseDict = {1: "s", -1: "w", 0: "g"}
 you = youDict[youstr]
@@ -28,4 +28,6 @@ else:
     elif(computer == 0 and you == -1):
         print("You win")
     else:
-        print("Something went wrong")                           
+        print("Something went wrong")     
+
+input("Press Enter to exit...")
