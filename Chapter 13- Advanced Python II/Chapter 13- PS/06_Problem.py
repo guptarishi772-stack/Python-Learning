@@ -1,0 +1,1 @@
+# Rishienv and requirement.txt in terminal
