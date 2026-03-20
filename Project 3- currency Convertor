@@ -1,0 +1,21 @@
+import requests
+
+currency_code = input("Enter Currency = ").upper()
+
+url = "https://api.exchangerate-api.com/v4/latest/USD"
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    rates = data["rates"]
+
+    if currency_code in rates:
+        rate = rates[currency_code]
+        print(f"1 USD = {rate} {currency_code}")
+
+    else:
+        print(f"The {currency_code} not found")  
+
+else:
+    print("Error fetching data")          
